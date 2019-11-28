@@ -1,0 +1,14 @@
+mixin todoItem(text, fromUser, toUser)
+    .todo-item
+        button.done-button
+            span.item-label
+                | Done
+        p.text #{text}
+        .user-images
+            +userImage(fromUser.name, fromUser.imagePath, 'From')
+            +userImage(toUser.name, toUser.imagePath, 'To')
+
+mixin userImage(userName, userImagePath, text)
+    .user-image
+        span.item-label #{text}
+        img(src=userImagePath, alt=userName)

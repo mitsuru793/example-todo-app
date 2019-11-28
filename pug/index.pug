@@ -1,0 +1,30 @@
+-
+  var todo = {
+      text: '19日の午前10時に課長の田中さんに、新規サイトの進捗をメールで伺う',
+      fromUser: {
+          name: 'Mike',
+          imagePath: '/imgs/animal_deer.png',
+      },
+      toUser: {
+          name: 'Mike',
+          imagePath: '/imgs/animal_panda.png',
+      },
+  }
+
+html
+    head
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='/main.css')
+    body
+        include includes/todo-item.pug
+        .container
+            .app
+                .todo-item.new-todo
+                    button.add-button
+                        span.item-label Add
+                    input(type='text')
+                    .user-image.from
+                        span.item-label To
+                        img(src=todo.fromUser.imagePath, alt='')
+                .todo-items.mt-10
+                    +todoItem(todo.text, todo.fromUser, todo.toUser)
