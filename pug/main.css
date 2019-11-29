@@ -36,6 +36,12 @@ button {
   display: flex;
   height: 3em;
 }
+.new-todo input[type=text] {
+  padding-left: 0.5em;
+  color: #333;
+  font-size: 2em;
+  font-weight: lighter;
+}
 
 .new-todo input {
   display: block;
