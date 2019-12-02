@@ -1,9 +1,10 @@
 {
-  "dependencies": {
-    "pug": "^2.0.4",
-    "pug-cli": "^1.0.0-alpha6",
-    "pug-loader": "^2.4.0",
-    "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2"
+  "scripts": {
+    "dev": "parcel index.pug",
+    "build": "parcel build index.pug"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4"
   }
 }
