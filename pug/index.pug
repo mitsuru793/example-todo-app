@@ -27,5 +27,6 @@ html
                         .user-image.from
                             span.item-label To
                             img(src=todo.fromUser.imagePath, alt='')
-                .todo-items.mt-10
+                .line.mt-20
+                .todo-items.mt-20
                     +todoItem(todo.text, todo.fromUser, todo.toUser)
