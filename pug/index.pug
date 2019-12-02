@@ -19,12 +19,13 @@ html
         include includes/todo-item.pug
         .container
             .app
-                .todo-item.new-todo
-                    button.add-button
-                        span.item-label Add
-                    input(type='text')
-                    .user-image.from
-                        span.item-label To
-                        img(src=todo.fromUser.imagePath, alt='')
+                .todo-items
+                    .todo-item.new-todo
+                        button.add-button
+                            span.item-label Add
+                        input(type='text')
+                        .user-image.from
+                            span.item-label To
+                            img(src=todo.fromUser.imagePath, alt='')
                 .todo-items.mt-10
                     +todoItem(todo.text, todo.fromUser, todo.toUser)

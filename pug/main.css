@@ -27,11 +27,6 @@ button {
   margin: 1em 0;
 }
 
-.app {
-  min-width: 30em;
-  max-width: 50em;
-}
-
 .new-todo {
   display: flex;
   height: 3em;
@@ -55,6 +50,11 @@ button {
   display: flex;
   height: 4em;
   border: 1px solid #b9ebff;
+}
+
+.todo-items {
+  min-width: 30em;
+  max-width: 50em;
 }
 
 .item-label {
