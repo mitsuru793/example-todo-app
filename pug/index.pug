@@ -10,6 +10,46 @@
             imagePath: '/imgs/animal_panda.png',
         },
     }
+-
+    var searchList = {
+        keyword: [
+            {
+                value: 'created',
+                label: 'Created',
+            },
+            {
+                value: 'updated',
+                label: 'Updated',
+            },
+        ],
+        to: [
+            {
+                value: 'deer',
+                label: 'Deer',
+            },
+            {
+                value: 'Panda',
+                label: 'Panda',
+            },
+        ],
+        from: [
+            {
+                value: 'deer',
+                label: 'Deer',
+            },
+            {
+                value: 'Panda',
+                label: 'Panda',
+            },
+        ],
+    }
+
+mixin searchSelectItem(label, choices)
+    .search-item
+        span.label #{label}
+        select(name='keyword')
+            each choice in choices
+                option(value=choice.value) #{choice.label}
 
 html
     head
@@ -28,5 +68,12 @@ html
                             span.item-label To
                             img(src=todo.fromUser.imagePath, alt='')
                 .line.mt-20
+                .todo-items.search-box.mt-20
+                    .search-item.keyword
+                        span.label Search
+                        input(type='text')
+                    +searchSelectItem('Sort', searchList.keyword)
+                    +searchSelectItem('Sort', searchList.from)
+                    +searchSelectItem('Sort', searchList.to)
                 .todo-items.mt-20
                     +todoItem(todo.text, todo.fromUser, todo.toUser)
