@@ -11,6 +11,11 @@
         },
     }
 -
+    var loginUser = {
+        name: 'Panda',
+        imagePath: '/imgs/animal_panda.png',
+    }
+-
     var searchList = {
         keyword: [
             {
@@ -58,7 +63,13 @@ html
     body
         include includes/todo-item.pug
         .container
-            .app
+            header
+                .loginUser
+                    .name
+                        span #{loginUser.name}
+                    img(src=loginUser.imagePath)
+                    button.menu ▼
+            .app.mt-20
                 .todo-items
                     .todo-item.new-todo
                         button.add-button
