@@ -68,7 +68,11 @@ html
                     .name
                         span #{loginUser.name}
                     img(src=loginUser.imagePath)
-                    button.menu ▼
+                    .menu
+                        button.button ▼
+                        ul.items
+                            li.item
+                                a logout
             .app.mt-20
                 .todo-items
                     .todo-item.new-todo
