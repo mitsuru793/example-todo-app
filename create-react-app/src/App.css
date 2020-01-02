@@ -1,38 +1,217 @@
-.App {
+header {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  width: 100%;
+  background-color: #20caff
+}
+
+header .loginUser {
+  display: flex;
+  align-items: center;
+  margin-right: 2em
+}
+
+header .loginUser .name {
+  color: #fff
+}
+
+header .loginUser img {
+  margin-left: 1em;
+  width: 50px
+}
+
+header .menu {
+  height: 100%;
+  position: relative
+}
+
+header .menu:hover .items {
+  display: block
+}
+
+header .menu .button {
+  height: 100%;
+  margin-left: 10px;
+  color: #fff;
+  background: transparent
+}
+
+header .menu .items {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -45px;
+  padding: 10px;
+  background: #20caff;
+  border: 1px solid #fff;
+  border-top: 0 solid #fff;
+  list-style: none;
+  color: #fff
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #fff
+}
+
+.search-item {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  height: 2em
+}
+
+.search-item .keyword {
+  flex-grow: 5
+}
+
+.search-item .label {
+  color: #fff;
+  font-size: 1.2em
+}
+
+.search-item input, .search-item select {
+  margin-left: 1em;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block
+}
+
+.search-item select {
+  background: transparent;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 1px solid #fff
+}
+
+.search-item input[type=text] {
+  width: 100%;
+  height: 100%
+}
+
+.new-todo {
+  display: flex;
+  height: 3em
+}
+
+.new-todo input[type=text] {
+  display: block;
+  width: 100%;
+  padding-left: .5em;
+  color: #333;
+  font-size: 2em;
+  font-weight: lighter
+}
+
+.new-todo input[type=text] focus {
+  outline: none
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer
+}
+
+.pager .item {
+  margin-left: .7em
+}
+
+.pager .first {
+  margin-left: 0
+}
+
+.pager .numbers {
+  display: flex
+}
+
+.todo-items {
+  min-width: 30em;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.todo-item {
+  display: flex;
+  height: 4em;
+  border: 1px solid #b9ebff
+}
+
+.todo-item .text {
+  width: 100%;
+  padding: .5em;
+  background-color: #fff
+}
+
+.todo-item .item-label {
+  display: block;
+  height: 100%;
+  width: 2em;
+  background-color: #20caff;
+  color: #eee;
+  font-weight: 700;
+  writing-mode: vertical-rl;
   text-align: center;
+  line-height: 2em
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-images {
+  display: flex;
+  margin-left: auto
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-image {
+  display: flex
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-image img {
+  display: block;
+  height: 100%;
+  width: 50px;
+  object-fit: cover
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  background-color: #40a0ff
+}
+
+button {
+  font-size: inherit;
+  border-width: 0;
+  cursor: pointer
+}
+
+.mt-20 {
+  margin-top: 20px
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  width: 100%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line {
+  height: 10px;
+  background-image: radial-gradient(farthest-side, #fff 33%, hsla(0, 0%, 100%, 0) 0);
+  background-position: bottom;
+  background-size: 30px 10px;
+  background-repeat: repeat-x
 }
