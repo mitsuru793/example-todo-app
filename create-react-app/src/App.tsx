@@ -5,6 +5,7 @@ import TodoForm from "./components/TodoCreateForm"
 import TodoSearchForm from "./components/TodoSearchForm"
 import TodoItem from "./components/TodoItem"
 import Pager from "./components/Pager"
+import {DivideLine} from "./components/Util"
 
 const todo = {
   text: '19日の午前10時に課長の田中さんに、新規サイトの進捗をメールで伺う',
@@ -32,7 +33,7 @@ const App: React.FC = () => {
           <div className="todo-items">
             <TodoForm todo={todo}/>
           </div>
-          <div className="line mt-20"/>
+          <DivideLine/>
           <div className="todo-items search-box mt-20">
             <TodoSearchForm/>
           </div>
