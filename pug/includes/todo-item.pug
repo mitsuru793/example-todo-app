@@ -1,7 +1,7 @@
 mixin todoItem(text, fromUser, toUser)
     .todo-item
         button.done-button
-            span.c-todo-vertical-label
+            span.p-todo-label.c-vertical-label
                 | Done
         p.text #{text}
         .user-images
@@ -10,5 +10,5 @@ mixin todoItem(text, fromUser, toUser)
 
 mixin assignee(userName, userImagePath, text)
     .p-todo-assignee
-        span.c-todo-vertical-label #{text}
+        span.p-todo-label.c-vertical-label #{text}
         img.c-user-image(src=userImagePath, alt=userName)
