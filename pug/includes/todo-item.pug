@@ -4,7 +4,7 @@ mixin todoItem(text, fromUser, toUser)
             span.p-todo-label.c-vertical-label
                 | Done
         p.p-todo-text #{text}
-        .user-images
+        .p-todo-assignees
             +assignee(fromUser.name, fromUser.imagePath, 'From')
             +assignee(toUser.name, toUser.imagePath, 'To')
 
