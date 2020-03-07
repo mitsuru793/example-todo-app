@@ -5,10 +5,10 @@ mixin todoItem(text, fromUser, toUser)
                 | Done
         p.text #{text}
         .user-images
-            +userImage(fromUser.name, fromUser.imagePath, 'From')
-            +userImage(toUser.name, toUser.imagePath, 'To')
+            +assignee(fromUser.name, fromUser.imagePath, 'From')
+            +assignee(toUser.name, toUser.imagePath, 'To')
 
-mixin userImage(userName, userImagePath, text)
-    .user-image
+mixin assignee(userName, userImagePath, text)
+    .p-todo-assignee
         span.c-todo-vertical-label #{text}
-        img(src=userImagePath, alt=userName)
+        img.c-user-image(src=userImagePath, alt=userName)
