@@ -74,8 +74,8 @@ html
                             li.item
                                 a logout
             .app.mt-20
-                .todo-items
-                    .todo-item.new-todo
+                .p-todos
+                    .p-todo.new-todo
                         button.add-button
                             span.p-todo-label.c-vertical-label Add
                         input(type='text')
@@ -83,14 +83,14 @@ html
                             span.p-todo-label.c-vertical-label To
                             img.c-user-image(src=todo.fromUser.imagePath, alt='')
                 .line.mt-20
-                .todo-items.search-box.mt-20
+                .p-todos.search-box.mt-20
                     .search-item.keyword
                         span.label Search
                         input(type='text')
                     +searchSelectItem('Sort', searchList.keyword)
                     +searchSelectItem('Sort', searchList.from)
                     +searchSelectItem('Sort', searchList.to)
-                .todo-items.mt-20
+                .p-todos.mt-20
                     +todoItem(todo.text, todo.fromUser, todo.toUser)
                 .pager.mt-20
                     .item.first ◀
