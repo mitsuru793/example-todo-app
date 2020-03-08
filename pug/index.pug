@@ -65,7 +65,7 @@ html
         include includes/todo-form
         include includes/todo-item
         include includes/todo-search-form
-        .container
+        #container
             header
                 .loginUser
                     .name
@@ -76,7 +76,7 @@ html
                         ul.items
                             li.item
                                 a logout
-            .app.mt-20
+            #main.mt-20
                 .p-todos
                     +todoForm(todo.fromUser)
                 .c-horizontal-line.mt-20
