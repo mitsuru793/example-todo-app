@@ -1,13 +1,14 @@
 mixin todoSearchForm(sortList, fromList, toList)
-    .search-item.keyword
-        span.c-search-label Search
-        input(type='text')
-    +searchSelectItem('Sort', sortList)
-    +searchSelectItem('From', fromList)
-    +searchSelectItem('To', toList)
+    .p-todo-search-form
+        .p-todo-search-form__item.p-todo-search-form__keyword
+            span.c-search-label Search
+            input(type='text')
+        +searchSelectItem('Sort', sortList)
+        +searchSelectItem('From', fromList)
+        +searchSelectItem('To', toList)
 
 mixin searchSelectItem(label, choices)
-    .search-item
+    .p-todo-search-form__item
         span.c-search-label #{label}
         select(name='keyword')
             each choice in choices
