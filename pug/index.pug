@@ -62,6 +62,7 @@ html
         link(rel='stylesheet', href='/css/main.styl')
     body
         include includes/dropdown-menu
+        include includes/login-user
         include includes/pager
         include includes/todo-form
         include includes/todo-item
@@ -69,10 +70,7 @@ html
         header#l-header
             #l-header__left
             #l-header__right
-                .loginUser
-                    .name
-                        span #{loginUser.name}
-                    img(src=loginUser.imagePath)
+                +loginUser
                 +dropdownMenu
         #l-main.u-mt-20
             .p-todos
