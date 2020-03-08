@@ -1,0 +1,10 @@
+mixin pager(numbers)
+    .c-pager.mt-20
+        .c-pager__item ◀
+        - const center = Math.round(numbers.length / 2) - 1
+        each n, i in numbers
+            if i === center
+                .c-pager__item [#{n}]
+            else
+                .c-pager__item #{n}
+        .c-pager__item ▶

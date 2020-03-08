@@ -1,3 +1,5 @@
+include assignee
+
 mixin todoItem(text, fromUser, toUser)
     .p-todo
         button.done-button
@@ -7,8 +9,3 @@ mixin todoItem(text, fromUser, toUser)
         .p-todo-assignees
             +assignee(fromUser.name, fromUser.imagePath, 'From')
             +assignee(toUser.name, toUser.imagePath, 'To')
-
-mixin assignee(userName, userImagePath, text)
-    .p-todo-assignee
-        span.p-todo-label.c-vertical-label #{text}
-        img.c-user-image(src=userImagePath, alt=userName)

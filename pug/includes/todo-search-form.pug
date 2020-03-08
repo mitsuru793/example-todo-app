@@ -1,0 +1,7 @@
+mixin todoSearchForm(sortList, fromList, toList)
+    .search-item.keyword
+        span.label Search
+        input(type='text')
+    +searchSelectItem('Sort', sortList)
+    +searchSelectItem('From', fromList)
+    +searchSelectItem('To', toList)

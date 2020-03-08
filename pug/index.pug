@@ -17,7 +17,7 @@
     }
 -
     var searchList = {
-        keyword: [
+        sort: [
             {
                 value: 'created',
                 label: 'Created',
@@ -61,7 +61,10 @@ html
         meta(charset='UTF-8')
         link(rel='stylesheet', href='/css/main.styl')
     body
-        include includes/todo-item.pug
+        include includes/pager
+        include includes/todo-form
+        include includes/todo-item
+        include includes/todo-search-form
         .container
             header
                 .loginUser
@@ -75,32 +78,10 @@ html
                                 a logout
             .app.mt-20
                 .p-todos
-                    .p-todo.p-todo-form
-                        button.add-button
-                            span.p-todo-label.c-vertical-label Add
-                        input.p-todo-form__text(type='text')
-                        .p-todo-assignee.from
-                            span.p-todo-label.c-vertical-label To
-                            img.c-user-image(src=todo.fromUser.imagePath, alt='')
+                    +todoForm(todo.fromUser)
                 .line.mt-20
                 .p-todos.search-box.mt-20
-                    .search-item.keyword
-                        span.label Search
-                        input(type='text')
-                    +searchSelectItem('Sort', searchList.keyword)
-                    +searchSelectItem('Sort', searchList.from)
-                    +searchSelectItem('Sort', searchList.to)
+                    +todoSearchForm(searchList.sort, searchList.from, searchList.to)
                 .p-todos.mt-20
                     +todoItem(todo.text, todo.fromUser, todo.toUser)
-                .c-pager.mt-20
-                    .c-pager__item ◀
-                    - const numbers = [2,3,4,5,6]
-                    - const center = Math.round(numbers.length / 2) - 1
-                    each n, i in numbers
-                        if i === center
-                            .c-pager__item [#{n}]
-                        else
-                            .c-pager__item #{n}
-                    .c-pager__item ▶
-
-
+                +pager([2,3,4,5,6])

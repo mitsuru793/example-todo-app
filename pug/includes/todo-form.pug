@@ -1,0 +1,8 @@
+mixin todoForm(fromUser)
+    .p-todo.p-todo-form
+        button.add-button
+            span.p-todo-label.c-vertical-label Add
+        input.p-todo-form__text(type='text')
+        .p-todo-assignee.from
+            span.p-todo-label.c-vertical-label To
+            img.c-user-image(src=fromUser.imagePath, alt='')
