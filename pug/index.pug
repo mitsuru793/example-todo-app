@@ -49,13 +49,6 @@
         ],
     }
 
-mixin searchSelectItem(label, choices)
-    .search-item
-        span.c-search-label #{label}
-        select(name='keyword')
-            each choice in choices
-                option(value=choice.value) #{choice.label}
-
 html
     head
         meta(charset='UTF-8')

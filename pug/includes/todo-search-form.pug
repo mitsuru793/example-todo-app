@@ -5,3 +5,10 @@ mixin todoSearchForm(sortList, fromList, toList)
     +searchSelectItem('Sort', sortList)
     +searchSelectItem('From', fromList)
     +searchSelectItem('To', toList)
+
+mixin searchSelectItem(label, choices)
+    .search-item
+        span.c-search-label #{label}
+        select(name='keyword')
+            each choice in choices
+                option(value=choice.value) #{choice.label}
