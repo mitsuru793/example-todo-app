@@ -73,11 +73,11 @@ html
                 +loginUser
                 +dropdownMenu
         #l-main.u-mt-20
-            .p-todos
+            .c-row
                 +todoForm(todo.fromUser)
             .c-horizontal-line.u-mt-20
-            .p-todos.search-box.u-mt-20
+            .c-row.search-box.u-mt-20
                 +todoSearchForm(searchList.sort, searchList.from, searchList.to)
-            .p-todos.u-mt-20
+            .c-row.u-mt-20
                 +todoItem(todo.text, todo.fromUser, todo.toUser)
             +pager([2,3,4,5,6])
