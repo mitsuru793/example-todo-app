@@ -61,6 +61,7 @@ html
         meta(charset='UTF-8')
         link(rel='stylesheet', href='/css/main.styl')
     body
+        include includes/dropdown-menu
         include includes/pager
         include includes/todo-form
         include includes/todo-item
@@ -71,11 +72,7 @@ html
                     .name
                         span #{loginUser.name}
                     img(src=loginUser.imagePath)
-                    .menu
-                        button.button ▼
-                        ul.items
-                            li.item
-                                a logout
+                    +dropdownMenu
             #l-main.u-mt-20
                 .p-todos
                     +todoForm(todo.fromUser)
