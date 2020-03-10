@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "dev": "parcel index.pug",
-    "build": "parcel build index.pug"
+    "dev": "parcel index.pug bulma/index.pug flocss-pure/index.pug",
+    "build": "parcel build index.pug bulma/index.pug flocss-pure/index.pug"
   },
   "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2",
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
     "stylus": "^0.54.7"

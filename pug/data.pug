@@ -1,19 +1,28 @@
 -
+    function img(path) {
+        return `../imgs/${path}`
+    }
+
+    function css(path) {
+        return `./css/${path}`
+    }
+
+-
     var todo = {
         text: '19日の午前10時に課長の田中さんに、新規サイトの進捗をメールで伺う',
         fromUser: {
             name: 'Mike',
-            imagePath: '/imgs/animal_deer.png',
+            imagePath: img('animal_deer.png'),
         },
         toUser: {
             name: 'Mike',
-            imagePath: '/imgs/animal_panda.png',
+            imagePath: img('animal_panda.png'),
         },
     }
 -
     var loginUser = {
         name: 'Panda',
-        imagePath: '/imgs/animal_panda.png',
+        imagePath: img('animal_panda.png'),
     }
 -
     var searchList = {
