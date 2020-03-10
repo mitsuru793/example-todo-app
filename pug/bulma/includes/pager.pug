@@ -1,0 +1,14 @@
+- https://bulma.io/documentation/components/pagination/
+mixin pager(numbers)
+    nav.pagination.is-centered.is-small(role='navigation' aria-label='pagination')
+        a.pagination-previous ◀
+        a.pagination-next ▶
+        ul.pagination-list
+            each n, i in numbers
+                if i === center
+                    .c-pager__item [#{n}]
+                    li
+                        a.pagination-link(aria-label='Goto page #{n}') [#{n}]
+                else
+                    li
+                        a.pagination-link(aria-label='Goto page #{n}') #{n}

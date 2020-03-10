@@ -1,4 +1,5 @@
 include ../data
+include includes/pager
 include includes/todo-create-form
 include includes/todo-search-form
 
@@ -18,4 +19,4 @@ html
             +todoSearchForm(searchList.sort, searchList.from, searchList.to)
         .section todo item
         .section
-            p pager
+            +pager([2,3,4,5,6])
