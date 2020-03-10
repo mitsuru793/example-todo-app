@@ -1,13 +1,19 @@
+include ../data
+include includes/todo-create-form
+
 html
     head
         meta(charset='UTF-8')
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css")
+        link(rel='stylesheet', href=css('/main.sass'))
         script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
     body
         .columns
             .column left
             .column right
-        .section todo form
+        .section
+            +todoCreateForm(todo.fromUser)
+        .is-divider(data-content="OR")
+
         .section line
         .section todo search form
         .section todo item

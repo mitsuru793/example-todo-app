@@ -1,0 +1,10 @@
+mixin todoCreateForm(fromUser)
+    .field.has-addons
+        p.control
+            button.button.is-primary(type=submit) Add
+        p.control.is-expanded
+            input.input(type=text)
+        p.control
+            button.button.is-primary(type=submit) To
+        p.control
+            img.image.is-fit(src=fromUser.imagePath, alt='')
