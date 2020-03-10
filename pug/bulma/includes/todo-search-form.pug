@@ -1,0 +1,25 @@
+mixin todoSearchForm(sortList, fromList, toList)
+    .field.is-horizontal
+        .field-body
+            .field.is-horizontal
+                .field-label
+                    label.label Search
+                .field-body
+                    .field
+                        .control
+                            input.input(type=text)
+            +searchSelectItem('Sort', sortList)
+            +searchSelectItem('From', fromList)
+            +searchSelectItem('To', toList)
+
+mixin searchSelectItem(label, choices)
+    .field.is-horizontal
+        .field-label
+            label.label #{label}
+        .field-body
+            .field
+                control
+                    .select
+                        select(name='keyword')
+                            each choice in choices
+                                option(value=choice.value) #{choice.label}

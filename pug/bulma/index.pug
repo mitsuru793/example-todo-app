@@ -1,5 +1,6 @@
 include ../data
 include includes/todo-create-form
+include includes/todo-search-form
 
 html
     head
@@ -13,7 +14,8 @@ html
         .section
             +todoCreateForm(todo.fromUser)
         .is-divider(data-content="OR")
-        .section todo search form
+        .section
+            +todoSearchForm(searchList.sort, searchList.from, searchList.to)
         .section todo item
         .section
             p pager
