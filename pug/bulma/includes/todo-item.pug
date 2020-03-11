@@ -1,0 +1,14 @@
+mixin todoItem(text, fromUser, toUser)
+    .field.has-addons
+        p.control
+            button.button.is-primary(type=submit) Add
+        p.control.is-expanded
+            p.input #{text}
+        p.control
+            button.button.is-primary(type=submit) From
+        p.control
+            img.image.is-fit(src=fromUser.imagePath, alt='')
+        p.control
+            button.button.is-primary(type=submit) To
+        p.control
+            img.image.is-fit(src=toUser.imagePath, alt='')
