@@ -1,5 +1,6 @@
 include ../data
 include includes/dropdown-menu
+include includes/login-user
 include includes/pager
 include includes/todo-create-form
 include includes/todo-search-form
@@ -11,10 +12,13 @@ html
         link(rel='stylesheet', href=css('/main.sass'))
         script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
     body
-        .columns
-            .column left
-            .column
-                +dropdownMenu
+        .level
+            .level-left
+            .level-right
+                .level-item
+                    +loginUser(loginUser)
+                .level-item
+                    +dropdownMenu
         .section
             +todoCreateForm(todo.fromUser)
         .is-divider(data-content="OR")
