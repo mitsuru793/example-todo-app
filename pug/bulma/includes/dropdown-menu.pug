@@ -1,0 +1,11 @@
+mixin dropdownMenu
+    .dropdown.is-hoverable
+        .dropdown-trigger
+            button.button(aria-haspopup='true', aria-controls='dropdown-menu4')
+                span menu
+                span.icon.is-small
+                    i.fas.fa-angle-down(aria-hidden='true')
+        .dropdown-menu(role='menu')
+            .dropdown-content
+                .dropdown-item
+                    p logout

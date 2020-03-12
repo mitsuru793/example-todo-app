@@ -1,4 +1,5 @@
 include ../data
+include includes/dropdown-menu
 include includes/pager
 include includes/todo-create-form
 include includes/todo-search-form
@@ -12,7 +13,8 @@ html
     body
         .columns
             .column left
-            .column right
+            .column
+                +dropdownMenu
         .section
             +todoCreateForm(todo.fromUser)
         .is-divider(data-content="OR")
